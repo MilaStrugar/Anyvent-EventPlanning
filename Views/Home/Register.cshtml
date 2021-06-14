@@ -1,0 +1,33 @@
+@model User
+
+<body>
+    <a href="/login">Log In</a>
+    <form method="post" asp-controller="Home" asp-action="Register">
+        <div class="mb-3">
+            <label asp-for="FirstName">First Name:</label>
+            <input asp-for="FirstName" class="form-control" />
+            <span asp-validation-for="FirstName" class="aler-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="LastName">Last Name:</label>
+            <input asp-for="LastName" class="form-control" />
+            <span asp-validation-for="LastName" class="aler-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Email">Email:</label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="aler-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Password">Password:</label>
+            <input asp-for="Password" class="form-control" />
+            <span asp-validation-for="Password" class="aler-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="ConfirmPassword">Confirm Password:</label>
+            <input asp-for="ConfirmPassword" class="form-control" />
+            <span asp-validation-for="ConfirmPassword" class="aler-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+</body>
